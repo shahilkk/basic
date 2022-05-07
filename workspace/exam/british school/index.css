@@ -1,0 +1,35 @@
+body{
+    font-family: sans-serif;
+}
+
+
+.heading{
+    font-size: 30px;
+    font-weight: 700;
+}
+.nav-link{
+    font-size: 20px;
+    font-weight: 500;
+}
+.grad{
+    background-image: linear-gradient(to top,#bdc3c7 ,#2c3e50);
+}
+.row1{
+    margin-top: 20px;
+}
+.carousel-caption{
+bottom: 300px;
+}
+.carousel-caption h5{
+    color: black;
+    font-weight: 900;
+    font-size: xx-large;
+}
+.carousel-caption p{
+    color: black;
+    font-weight: 600;
+    font-size: x-large;
+}
+.card1{
+    background-image: linear-gradient(to top,#56CCF2,#2F80ED);
+}

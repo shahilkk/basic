@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<body>
+    <div class="timeoutPopup timeoutPopup_hidden" id="timeoutPopup">
+        <div class="timeoutPopup__wrapper">
+          <div class="timeoutPopup__close"></div>
+          <div class="timeoutPopup__content">
+            ...
+            Modal Content Here
+            ...
+          </div>
+        </div>
+      </div>
+
+
+
+    <script>
+          // 10 seconds
+var openTimeoutPopup = new TimeoutPopup('#signmodal', 10);
+
+// init
+openTimeoutPopup.init();
+    </script>
+</body>
+</html>

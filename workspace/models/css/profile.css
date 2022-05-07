@@ -1,0 +1,106 @@
+.{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+}
+.profile-card{
+    width: 500px;
+    text-align: center;
+    border-radius: 9px;
+    overflow: hidden;
+    margin: 500px;
+    
+
+}
+.card-header{
+    background-image: linear-gradient(#333333,#dd1818);
+    padding: 60px 40px;
+    align-content: center;
+}
+.pic{
+    display: inline-block;
+    padding: 10px;
+    background: linear-gradient(130deg, #74b9ff,#e66767);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite;
+    
+    
+ 
+}
+@keyframes animated-gradient{
+25%{
+    background-position :left bottom;
+
+}
+50%{
+    background-position :right bottom;
+
+}
+75%{
+    background-position :right top;
+
+}
+100%{
+    background-position :left top;
+
+}
+}
+
+
+.back{
+    display: block;
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+
+}
+.name{
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+
+
+}
+.des{
+    font-size: 20px;
+    color: rgb(1, 170, 66);
+}
+.sm a{
+    color: #0a0a0f;
+    width: 53px;
+    font-size: 22px;
+    transition: .4s linear; 
+    text-decoration: none;
+}
+.sm a:hover{
+    color: cyan;
+
+}
+.contact{
+    display: inline-block;
+    padding: 12px 50px;
+    color: rgb(218, 11, 11);
+    border: 2px solid rgb(218, 11, 11);
+    border-radius: 7px;
+    margin-top: 16px;
+    transition: .3s linear;
+    text-decoration: none;
+}
+.contact:hover{
+    background: cyan;
+    color: #f2f2f2;
+}

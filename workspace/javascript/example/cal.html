@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="enter 1st number" id="n1"><br>
+    <input type="number" placeholder="enter 2nd number" id="n2"><br>
+    <button onclick="add()">ADD</button><br>
+    <button onclick="sub()">SUB</button><br>
+    <button onclick="mul()">MUL</button><br>
+    <button onclick="div()">DIV</button><br>
+    <input type="text" placeholder="result" id="equ"><br>
+
+    <script>
+         function add(){
+            a=Number(document.getElementById("n1").value)
+            b=Number(document.getElementById("n2").value)
+            sum=a+b
+            document.getElementById('equ').value=sum
+        }
+        function sub(){
+            a=Number(document.getElementById("n1").value)
+            b=Number(document.getElementById("n2").value)
+            sub=a-b
+            document.getElementById('equ').value=sub
+        }
+        function mul(){
+            a=Number(document.getElementById("n1").value)
+            b=Number(document.getElementById("n2").value)
+            mul=a*b
+            document.getElementById('equ').value=mul
+        }
+        function div(){
+            a=Number(document.getElementById("n1").value)
+            b=Number(document.getElementById("n2").value)
+            div=a/b
+            document.getElementById('equ').value=div
+        }
+            
+
+           
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

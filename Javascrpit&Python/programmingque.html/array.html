@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button onclick="sel()">click</button>
+    <ul id="ul">
+
+    </ul>
+    <p id="p"></p>
+
+    <script>
+
+        list = ['apple', 'orange', 'pine apple', 'mango']
+        var item = document.getElementById('ul')
+        for (var n1 of list) {
+            item.innerHTML += "<li>" + n1 + "</li>"
+        }
+        function sel() {
+            
+            name1 = document.getElementById('txt').value; 
+            if(document.getElementById('txt').value==""){
+           alert('enter a value')
+           }
+           else{
+            var index = list.indexOf(name1);
+            if (index != -1) {
+                list.splice(index, 1);
+                var item = document.getElementById('ul')
+            item.innerHTML = "";
+           for (var n1 of list) {
+            item.innerHTML += "<li>" + n1 + "</li>"
+           }
+            }else{
+                document.getElementById('p').innerHTML="element not found"
+            }
+          
+           }
+          
+          
+
+        }
+    </script>
+</body>
+
+</html>

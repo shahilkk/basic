@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style>
+    input{
+        border: none;
+        border-bottom: 3px solid black;
+        padding: 10px;
+        background-color: transparent;
+        margin: 10px;
+        width: 200px;
+        
+    }
+    .div{
+        height: 500px;
+        width: 400px;
+        background-color: burlywood;
+        text-align: center;
+    }
+    button{
+        height: 30px;
+        width: 100px;
+        background-color: turquoise;
+        border-radius: 30px;
+    }
+
+</style>
+</head>
+<body>
+    <div class="div">
+        <h1>Request Call Back</h1>
+        <form action="" id="form">
+        <input type="text" id="text" class="commen" name="fullname" placeholder="Full Name"><br>
+        <input type="text" id="mobile" class="commen" placeholder="Mobile Number"><br>
+        <input type="email" id="email" class="commen"  placeholder="email id"><br>
+        <input type="text " id="city" class="commen"  placeholder="City"><br>
+        <textarea name="" id="disc" class="commen"  cols="30" rows="5" placeholder="description" style="border: none; border-bottom: 3px solid black; background-color: transparent; width: 200px; "></textarea><br>
+       
+        <button type="submit" id="book">Book Now</button>
+
+    </form>
+    </div>
+    <div class="div1" >
+        <p id="para"></p>
+       
+    </div>
+  
+
+
+
+    <script>
+        $(document).ready(function(){
+            $('#form').validate({
+                rules:{
+                        fullname:{
+                            required:true,
+                            minlength:5,
+                        }
+                },
+                messages:{
+                            fullname:{
+                                required:'please fill form',
+                                minlength:'atleast 5',
+                            }
+                },
+                SubmitHandler: function(form){
+                 form.submit();
+             }
+            })
+        })
+       
+        $('#book').click(function(){
+            if ($('.commen').val()==""){
+                $('#para').text("fill the form")
+            }
+           
+            
+            
+            
+
+        })
+        $('#text').keyup(function(){
+            a=$('#text').val()
+            if (a.length<5){
+               $('#text').css({
+                   borderColor:"red"
+               })  
+            }else {
+                $('#text').css({
+                   borderColor:"green"
+               })  
+
+            }
+
+        })
+        $('#mobile').keyup(function(){
+            b=$('#mobile').val()
+            if(b.length!=10) {
+                $('#mobile').css({
+                    borderColor:"red"
+                })
+            }
+            else if (isNaN(b)){
+                $('#mobile').css({
+                    borderColor:"red"
+                })
+
+            }else {
+                $('#mobile').css({
+                   borderColor:"green"
+               })  
+
+            }
+
+            
+        })
+      
+        // $(function(){
+            // $("#book").click(function(){
+         $('#email').keyup(function(){
+           var c=$('#email').val()
+           if(c. indexOf("@")<0||c.indexOf(".")<0){
+            $('#email').css({
+                    borderColor:"red"
+                })
+           }else{
+            $('#email').css({
+                    borderColor:"green"
+                })
+
+           }
+           
+           })
+
+        //   })
+        // })
+
+
+
+        $('#city').keyup(function(){
+            var d=$('#city').val()
+            if(!(d.length>=5 && d.length<=16)){
+                $('#city').css({
+                    borderColor:"red"
+
+                })
+                
+           }else{
+            $('#city').css({
+                    borderColor:"green"
+                })
+
+           }
+                
+            
+        })
+
+
+        $('#disc').keyup(function(){
+            var e=$('#disc').val()
+            if(!(e.length>=10 && e.length<=50)){
+                
+                $('#disc').css({
+                    borderColor:"red"  
+                })
+                // alert('enter minimum 10 letter')
+           }else{
+            $('#disc').css({
+                    borderColor:"green"
+                })
+
+           }
+        })
+
+
+      
+    </script>
+    
+    
+</body>
+
+</html>

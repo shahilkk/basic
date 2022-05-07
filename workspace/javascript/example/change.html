@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  >
+       <label for="" >enter your name</label> 
+        <input type="text" id="text"  class="lab " onchange="done()"   > <br><br>
+        <label for="">enter your email</label>
+        <input type="email" class="lab" id="pass"  onkeyup="done1()" ><br><br>
+        <label for="">re-enter password</label>
+        <input type="password" class="lab" id="cor" onblur="done2()" ><br><br>
+        <button>save</button>
+    </form>
+
+
+
+    <script>
+        document.getElementById('text').required=true
+        a=document.getElementsByClassName('lab')
+
+                //   for single
+        //  [0]
+        // a.style.border="1px solid red"
+                        
+                    //    group
+        for(i=0;i<=a.length;i++){
+            a[i].style.border="8px solid red"
+        }
+
+        function done(){
+            document.getElementById('text').style.border="8px solid green"
+            if(document.getElementById('text').value=="")
+            {
+                document.getElementById('text').style.border="8px solid red"
+            }
+        }
+        function done1(){
+            document.getElementById('pass').style.border="8px solid green"
+        }
+        function done2(){
+            document.getElementById('cor').style.border="8px solid green"
+        }
+     
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // order number
+        n1 = 0
+        n2 = 1
+        limit = Number(prompt('enter a number'))
+        for (i = 2; i < limit; i++) {
+            n = n1 + n2
+            n1 = n2
+            n2 = n
+            document.write('<br>' + n)
+        }
+
+
+    </script>
+
+
+    <script>
+        // square number
+        n1 = 2
+        n2 = 3
+        limit = Number(prompt('enter a number'))
+        for (i = 2; i < limit; i++) {
+            a = n1 * n1
+            b = n2 * n2
+            document.write('<br>' + a)
+            document.write('<br>' + b)
+            n1 = a
+            n2 = b
+
+
+        }
+    </script>
+
+</body>
+
+</html>

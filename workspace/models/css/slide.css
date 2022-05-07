@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(16, 160, 12);
+
+}
+.slide{
+    width: 1000px;
+    height: 1000px;
+    background: url(../images/2.jpeg) ;
+
+    background-size: inherit;
+    margin: 100px auto ;
+    animation: slide 20s infinite;
+    
+
+
+}
+
+@keyframes slide{
+    20%{
+        background: url(../images/3.jpeg);
+    }
+    40%{
+        background: url(../images/4.jpeg);
+    }
+    60%{
+        background: url(../images/5.jpeg);
+    }
+    80%{
+        background: url(../images/6.jpeg);
+    }
+    100%{
+        background: url(../images/3.jpeg);
+    }
+}
+h1{
+    text-align: center;
+}

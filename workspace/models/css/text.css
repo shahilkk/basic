@@ -1,0 +1,17 @@
+h1{
+    font-size: 200px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 5x;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-image: url(../images/bg.jpg) ;
+    background-size: cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+
+
+}

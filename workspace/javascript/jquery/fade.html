@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        div{
+            height: 500px;
+            width: 500px;
+            background-color: rgb(153, 126, 17);
+            display: none;
+
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            padding: 10px 0 0 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="view">view product</h1>
+    <div>
+        <img src="Circle-icons-camera.svg.png" alt="">
+       <h1>camera1</h1>
+       <label for="">price</label> <input type="text"><br><br>
+       <label for="" >description</label> <p>Quibusdam atque eum laudantium numquam dolore <i id="icon" class="fas fa-plus"></i>  <span style="display: none;" id="text"> Quibusdam atque eum laudantium numquam dolore consectetur reprehenderit voluptate beatae cum ullam, modi possimus voluptatum, amet ut, tempore ipsa alias! Cupiditate, magni!</span></p>
+       <button>buy now</button>  <button>add to cart</button>
+
+        <script>
+            $('#view').click(function(){
+                $('div').fadeIn(3000)
+            })
+            $(' #icon').click(function(){
+                $('#text').show()
+                $('#icon').hide()
+            })
+
+        </script>
+
+    </div>
+</body>
+</html>

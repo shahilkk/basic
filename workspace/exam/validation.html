@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    jQuery(function($) {
+    $("#form").validate({
+        debug: false,
+        focusInvalid: false,
+        onfocusout: false,
+        onkeyup: false,
+        onclick: false,
+        rules: {
+            instrument: {
+                required: true,
+                maxlength: 10
+            },
+        },
+        messages: {
+            maxlength: "Must no longer than 10 characters",
+            required: "Must not be empty"
+        },
+        success: function(label) {
+            alert('succes:' + label);
+        },
+        submitHandler: function(form) {
+            alert('start submitHandler');
+            postContent('test');
+            alert('end submitHandler');
+        },
+        invalidHandler: function(form, validator) {
+            alert('invalidHandler');
+        },
+    });
+});
+
+
+function postContent(postData) {
+    alert('postcontent: ' + postData);
+
+}
+</script>
+</body>
+</html>

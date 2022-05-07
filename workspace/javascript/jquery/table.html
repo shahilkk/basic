@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        table{
+            height: 100px;
+            width: 200px;
+        }
+        input{
+        margin: 20px;
+        padding: 5px;
+
+    }
+    </style>
+    
+
+</head>
+<body>
+    <input type="text" id="sl" placeholder="slno"><br>
+    <input type="text" id="text" placeholder="name"><br>
+    <input type="number" id="age" placeholder="age"><br>
+    <button id="sub">submit</button><br>
+    <button id="btnre">remove</button>
+    
+    <table id="tab" border="2"> 
+        <tr >
+            <th>slno</th>
+            <th>name</th>
+            <th>age</th>
+           
+        </tr>
+       
+       
+    </table>
+
+
+
+    <script>
+        
+        
+        
+            $('#sub').click(function(){
+                 var a=$('#sl').val()
+                  var b=$('#text').val()
+                  var c=$('#age').val()
+                $('#tab').append('<tr id="tr"><td>'+a+'</td><td>'+b+'</td><td>'+c+'</td></tr>')
+                $('#sl').val("")
+                $('#text').val("")
+                $('#age').val("")
+               
+            })
+            $('#btnre').click(function(){
+                $('#tr').empty()
+            })
+    </script>
+</body>
+</html>

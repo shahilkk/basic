@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+    table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid gray;
+  padding: 5px 10px;
+}
+
+.sensitive {
+  display: none;
+}
+</style>
+</head>
+<body>
+<button>Show/Hide Details</button>
+
+<table>
+  <thead>
+    <th>No</th>
+    <th>Full Name</th>
+    <th>Nickname</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th >Email</th>
+    <th >Phone</th>
+    <th >Address</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Revan D. Cole</td>
+      <td>Revan</td>
+      <td>22</td>
+      <td>Male</td>
+      <td>revan.dcole@domain.com</td>
+      <td>(+1) 123 123</td>
+      <td>D Cole Street</td>
+    </tr>
+    <tr class="sensitive">
+      <td>2</td>
+      <td>Mira Rosenfield</td>
+      <td>Mira</td>
+      <td>21</td>
+      <td>Female</td>
+      <td >mira.rosenfield@domain.com</td>
+      <td >(+2) 234 234</td>
+      <td>Rose Street</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+    $("button").click(function() {
+  $(".sensitive").show();
+})
+
+</script>
+</body>
+</html>

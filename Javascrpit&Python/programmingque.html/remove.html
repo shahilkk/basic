@@ -1,0 +1,38 @@
+<!-- ---------------------- -->
+<!-- 1st method -->
+<script>
+    name=prompt('enter a string')
+    check=prompt('enter a letter')
+    var c=""
+        for(i=0;i<name.length;i++){
+            if(check!=name[i]){
+                c=c+(name[i])
+               
+            }
+        }
+        document.write(c)
+       
+    
+</script>
+
+
+
+
+
+<!-- ----------------------------------- -->
+<!-- 2nd method -->
+<script>
+      name=prompt('enter a string')
+    check=prompt('enter a letter')
+    flag=0
+        for(i=0;i<name.length;i++){
+            if(check==name[i]){
+              flag=1
+            }
+        }
+        if(flag==1)
+        {
+            newStr = name.replace(check,'');
+            document.write(newStr)
+        }
+</script>

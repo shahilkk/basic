@@ -1,0 +1,34 @@
+<script>
+    mark=[]
+    for(i=0;i<5;i++){
+        mark[i]=Number(prompt('enter a mark' + (i+1)))
+        
+
+    }
+    document.write( mark)
+    sum=0
+    for(i=0;i<=mark.length-1;i++){
+        sum+=mark[i]
+    }
+    alert('mark of total'+ sum)
+    document.write('<br>mark of total'+ sum)
+    avg=sum/5
+    document.write('<br> average is'+ avg)
+    totalmark=500
+    per=(sum/totalmark)*100
+    alert("the percentage is"+per)
+    document.write("<br>the percentage is"+per +'<br>')
+    if(per<100&&per>=90){
+            document.write('<br>A grade')
+         }else if(per>=80){
+            document.write('<br>B grade')
+         }else if(per>=70){
+            document.write('<br>c grade')
+         }else if(per>=60){
+            document.write('<br>d grade')
+         }else if(per>=50){
+            document.write('<br>e grade')
+         }else{
+            document.write('<br>failed')
+         }
+</script>

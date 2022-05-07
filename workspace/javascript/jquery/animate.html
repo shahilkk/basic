@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>touch</h1>
+    <div style="background-color: crimson; width: 500px; height: 400px; position: absolute;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, esse. Nihil facere maiores dolores cum quia pariatur ea perspiciatis debitis molestiae. Officia sapiente ullam quaerat earum facilis. Quisquam, neque ducimus.</div>
+       
+
+
+
+    <script>
+        $('h1').click(function(){
+            $('div').css({
+                backgroundColor:'yellow',width: '900px', height: '500px' , fontSize:'60px'
+            }).animate({
+                left:'300px',bottom:'100px' },4000)
+        })
+    </script>
+</body>
+</html>

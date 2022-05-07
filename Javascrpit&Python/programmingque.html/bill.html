@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="div">
+        <label for="">product name</label> <input id="pro" type="text">
+        <label for="">quantity</label> <input id="qua" type="number">
+        <label for="">Price</label> <input id="pri" type="number">
+        <input type="button" value="add" id="add">
+    </div>
+    <table id="table" border="2">
+        <tr>
+            <th>product name</th>
+            <th>quantity</th>
+            <th>price</th>
+            <th>Total price</th>
+        </tr>
+
+    </table>
+    <label for="">grand Total</label>
+    <input id="grand" type="text">
+    <script>
+        var completeTotal = 0;
+        $('#add').click(function () {
+            var product = $('#pro').val()
+            var quan = $('#qua').val()
+            var price = $('#pri').val()
+            total = quan * price
+            completeTotal = completeTotal + total
+            $('#table').append('<tr id="tr"><td>' + product + '</td><td>' + quan + '</td><td>' + price + '</td><td>' + total + '</td></tr>')
+            $('#pro').val("")
+            $('#qua').val("")
+            $('#pri').val("")
+            $('#grand').val(completeTotal)
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  form {
+    height: 300px;
+    width: 300px;
+
+  }
+</style>
+
+<body>
+
+
+  <form>
+    <label for="">enter your name</label>
+    <input type="text" id="text" class="lab "> <br><br>
+    <p id="per"></p>
+    <label for="">enter your email</label>
+    <input type="email" class="lab" id="pass"><br><br>
+    <p id="per1"></p>
+    <label for="">re-enter password</label>
+    <input type="password" class="lab" id="cor"><br><br>
+    <p id="per2"></p>
+    <label for="">gender</label>
+    <input type="radio" name="gen" id="ma">male
+    <input type="radio" name="gen" id="fe">female <br><br>
+    <label for="">enter age</label>
+    <input type="text" name="" id="age"><br><br>
+    <label for="">enter phone</label>
+    <input type="text" name="" id="pho"> <br><br>
+    <button onclick="return funsave()">save</button>
+
+  </form>
+
+  <script>
+
+    function funsave() {
+      user = document.getElementById("text")
+      email = document.getElementById("pass")
+      cor = document.getElementById("cor")
+      male = document.getElementById("ma")
+      female = document.getElementById("fe")
+      age = document.getElementById("age")
+      phone = document.getElementById("pho")
+
+
+      if (user.value == "") {
+        document.getElementById('per').innerHTML = 'field is requried'
+        document.getElementById('text').style.borderColor = 'red'
+
+        return false
+      }
+      else if (email.value == "") {
+        email.focus()
+        return false
+      }
+      else if (cor.value.length < 8) {
+        cor.style.borderColor = "blue";
+        return false
+
+      }
+      else if (male.checked == "" && female.checked == "") {
+        alert('please select gender')
+        //   male.focus();
+        //   female.focus();
+        // document.getElementById("ma").focus();
+        // document.getElementById("fe").focus();
+        document.getElementsByName('gen').focus();
+        return false
+
+      }
+
+      else if (age.value == "" || isNaN(age.value)) {
+        alert('enter age')
+        return false
+      }
+      else if (phone.value.length != 10) {
+        alert('maximum 10 digit')
+        return false
+      }
+
+    }
+  </script>
+
+
+
+</body>
+
+</html>

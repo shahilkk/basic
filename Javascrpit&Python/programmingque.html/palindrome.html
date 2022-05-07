@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // string palindrome
+        name=prompt('enter a string')
+        flag=0
+        for(i=0,j=name.length-1;i<name.length/2;i++,j--){
+            if(name[i]==name[j]){
+                flag=1
+            }
+            else{
+                flag=0
+                break
+            }
+        }
+        if(flag==1){
+            document.write('palindrome')
+        }
+        else{
+            document.write('not palindrome')
+        }
+        
+
+    </script>
+
+    <script>
+        // number palindrome
+
+        
+        l=Number(prompt('enter number '))
+        c=l
+        n1=0
+        while(l>0)
+        {
+            d=l%10
+            n1=n1*10+d
+            l=parseInt(l/10)
+        }
+        if(c==n1)
+        {
+            document.write("palindrome")
+        }
+        else
+        {
+            document.write("not palindrome")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.heading{
+    font-weight: 500;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.adbtn{
+    background-color: wheat;
+    border-radius: 20px;
+}
+.adbtn:hover{
+    background-color: turquoise;
+}

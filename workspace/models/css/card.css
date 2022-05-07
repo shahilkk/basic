@@ -1,0 +1,106 @@
+body .padding1{
+    width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Exo:700');
+body .container1{
+    background-color: #dfe6e9;
+    -webkit-transform: perspective(900px);
+    -webkit-transform-style: preserve-3d;
+
+}
+body .container1 .card-title{
+    font-family: 'Exo',sans-serif;
+    text-align: center;
+}
+body .container1 .card1{
+    position: absolute;
+    height: 18rem;
+    width: 18rem;
+     /* width: 250px;
+     height: 250px; */
+     left: 100px;
+    margin-top: 10px;
+    background: linear-gradient(rgb(225,150,58),rgb(227,144,91));
+    transition: .6s;
+    transform: rotateX(75deg) translateY(-200px) translateZ(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0,0.5);
+
+}
+body .container1 .card1:hover{
+    transform: rotateX(0deg);
+    transform: rotateZ(0deg);
+    transition: .6s;
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.3);
+
+} 
+body .container1 .card-img{
+    transform: translateY(15px);
+    width: 200px;
+    height: 120px;
+}
+body .container1 .card2{
+    position: absolute;
+    height: 18rem;
+    width: 18rem;
+    
+     /* width: 250px;
+     height: 250px; */
+     /* left: 1000px; */
+    margin-top: 10px;
+    background: linear-gradient(rgb(225,150,58),rgb(227,144,91));
+    transition: .6s;
+    transform: rotateX(75deg) translateY(-200px) translateZ(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0,0.5);
+
+}
+body .container1 .card2:hover{
+    transform: rotateX(0deg);
+    transform: rotateZ(0deg);
+    transition: .6s;
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.3);
+
+} 
+body .container1 .card3{
+    position: absolute;
+    height: 18rem;
+    width: 18rem;
+     /* width: 250px;
+     height: 250px; */
+     left: 650px;
+    margin-top: 10px;
+    background: linear-gradient(rgb(225,150,58),rgb(227,144,91));
+    transition: .6s;
+    transform: rotateX(75deg) translateY(-200px) translateZ(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0,0.5);
+
+}
+body .container1 .card3:hover{
+    transform: rotateX(0deg);
+    transform: rotateZ(0deg);
+    transition: .6s;
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.3);
+
+} 
+body .container1 .card4{
+    position: absolute;
+    height: 18rem;
+    width: 18rem;
+     /* width: 250px;
+     height: 250px; */
+     left: 950px;
+    margin-top: 10px;
+    background: linear-gradient(rgb(225,150,58),rgb(227,144,91));
+    transition: .6s;
+    transform: rotateX(75deg) translateY(-200px) translateZ(-100px);
+    box-shadow: 0px 20px 60px rgba(0,0,0,0.5);
+
+}
+body .container1 .card4:hover{
+    transform: rotateX(0deg);
+    transform: rotateZ(0deg);
+    transition: .6s;
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.3);
+
+} 

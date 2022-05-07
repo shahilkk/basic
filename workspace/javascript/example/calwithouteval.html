@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+
+        }
+        table{
+            height: 400px;
+            width: 300px;
+            justify-content: center;
+            margin-left: 40%;
+            margin-top: 10%;
+            
+        }
+        body{
+            text-align: center;
+            justify-content: center;
+         
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-bottom: 3px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing=1>
+        <tr>
+            <td colspan="6"><input type="text" id="disp" readonly></td>
+        </tr>
+        <tr>
+            <td ><button value="+" onclick="opfun('+')">+</button></td>
+            <td ><button value="-" onclick="opfun('-')">-</button></td>
+            <td ><button value="*" onclick="opfun('*')">*</button></td>
+            <td ><button value="/" onclick="opfun('/')">/</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"> <button  value="cancel" onclick="cancel()">cancel</button> </td>
+            <td><button value="delet" onclick="delet()">  delect</button></td>
+            <td><button onclick="dot()" id="btn">.</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="val('6')">6</button></td>
+            <td><button onclick="val('7')">7</button></td>
+            <td><button onclick="val('8')">8</button></td>
+            <td><button onclick="val('9')">9</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="val('2')">2</button></td>
+            <td><button onclick="val('3')">3</button></td>
+            <td><button onclick="val('4')">4</button></td>
+            <td><button onclick="val('5')">5</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="val('0')">0</button></td>
+            <td><button onclick="val('1')">1</button></td>
+          <td colspan="2"><button onclick="equ('=')">=</button></td>
+        </tr>
+
+    </table>
+    
+   
+   <script>
+      let a=document.getElementById('disp');
+       function val(num){
+           document.getElementById('disp').value+=num
+
+       }
+       function cancel(){
+        document.getElementById('disp').value=""
+       }
+       function delet(){
+           a.value=a.value.slice(0,-1);
+       }
+       function opfun(opr){
+          add1= Number( document.getElementById('disp').value)
+           operation=opr
+          document.getElementById('disp').value=""
+          document.getElementById('btn').disabled=false
+
+
+
+
+       }
+         function dot(){
+             k= document.getElementById('disp').value+='.'
+
+            if(k.length>1)
+            {
+                document.getElementById('btn').disabled=true
+                
+
+            }
+
+         }
+
+
+
+
+       function equ(){
+           add2=Number( document.getElementById('disp').value)
+
+           if(operation=='+')
+           {
+               result=add1+add2 
+             b=  document.getElementById('disp').value=result 
+             b+=num
+               
+           }
+           else if(operation=='-')
+           {
+               result=add1-add2   
+           }
+           else if(operation=='*')
+           {
+               result=add1*add2   
+           }
+           else if(operation=='/')
+           {
+               result=add1/add2   
+           }
+
+
+           document.getElementById('disp').value=result;
+           document.getElementById('btn').disabled=false
+
+
+       }
+
+
+   </script>
+</body>
+</html>

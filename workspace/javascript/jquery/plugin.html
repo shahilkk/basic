@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <style>
+     .error{
+         color: red;
+     }
+ </style>
+</head>
+<body>
+    <form action="" id="myform">
+        <input type="text" placeholder="name" name="name"><br>
+        <input type="text" placeholder="place" name="place"><br>
+        <input type="number" placeholder="age" name="age"><br>
+        <input type="email" placeholder="email id" name="email"><br>
+        <input type="password" placeholder="password" name="password" id="password"><br>
+        <input type="password" placeholder="conform_password" name="conf" ><br>
+
+        <button  type="submit">submit</button>
+        <button id="reset"> reset</button>
+    </form>
+
+     <script>
+         $(document).ready(function(){
+             $('#myform').validate({
+                rules :{
+                     name:{
+                         required:true,
+                         minlength:5,
+                     },
+                     place:{
+                        required:true,
+
+                         minlength:5,
+                     },
+                     age:{
+                        required:true,
+                         number:true,
+                     },
+                     email:{
+                         required:true,
+                         email:true,
+
+                     },
+                     password:{
+                        required:true,
+                         minlength:5,
+
+                     },
+                     conf:{
+                        required:true,
+                       equalTo:"#password"
+                    },
+                     
+                 },
+                messages:{
+
+                    name:{
+                        required:"*please fill this field",
+                        minlength:"atleast 5"
+                    },
+                    place:{
+                        required:"please fill this field",
+                        minlength:"atleast 5"
+                    },
+                    age:{
+                        required:"enter your age",
+                        type:"must be integer"
+                    },
+                    email:{
+                        required:"enter email id",
+                        email:"enter a valid email id",
+
+                    },
+                    password:{
+                        required:"please fill this field",
+                        minlength:"atleast 5"
+                    },
+                    conf:{
+                        required:"please fill this field",
+                       equalTo:"password must be same"
+                    }
+                 },
+             
+             SubmitHandler: function(myform){
+                 form.submit();
+             }
+            })
+
+         })
+     </script>
+</body>
+</html>
